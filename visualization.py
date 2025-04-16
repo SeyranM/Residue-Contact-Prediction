@@ -222,14 +222,14 @@ def visualize_prior(file_name: str):
 
 
 if __name__ == "__main__":
-    # if not CFG.visualization_dir.exists():
-    #     os.makedirs(CFG.visualization_dir, exist_ok=True)
-    #
-    # plot_metrics()
-    # plot_sequence_length_distribution()
-    #
-    # if CFG.processed_data_dir.exists():
-    #     plot_label_distribution()
-    #     plot_contact_density_vs_length()
-    #     plot_contacts_per_residue()
+    if not CFG.visualization_dir.exists():
+        os.makedirs(CFG.visualization_dir, exist_ok=True)
+
+    plot_metrics()
+    plot_sequence_length_distribution()
+
+    if CFG.processed_data_dir.exists():
+        plot_label_distribution()
+        plot_contact_density_vs_length()
+        plot_contacts_per_residue()
     visualize_prior(CFG.processed_data_dir.joinpath("train", "1A2G"))

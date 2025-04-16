@@ -232,9 +232,9 @@ class EmbeddingPreprocessor:
         df_lengths.to_csv(processed_dir.joinpath("sequence_lengths.csv"), index=False)
 
 if __name__ == '__main__':
-    # contact_map_processor = ContactMapPreprocessor(n_processes=8)
-    # contact_map_processor.run()
+    contact_map_processor = ContactMapPreprocessor(n_processes=8)
+    contact_map_processor.run()
     embedding_processor = EmbeddingPreprocessor(batch_size=8)
-    # embedding_processor.run()
+    embedding_processor.run()
     embedding_processor.add_similarity_priors("train")
     embedding_processor.add_similarity_priors("val")

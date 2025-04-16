@@ -7,7 +7,7 @@ import pandas as pd
 class PreprocessedTensorDataset(Dataset):
     def __init__(self, tensor_dir: str):
         self.tensor_files: List[str] = [
-            os.path.join(tensor_dir, f) for f in os.listdir(tensor_dir)[:4000]
+            os.path.join(tensor_dir, f) for f in os.listdir(tensor_dir)[:4000] # Using only first 4000 embeddings
             if f.endswith(".pt")
         ]
         self.lengths = self._load_lengths()

@@ -13,7 +13,7 @@ class CFG:
     reporting_dir = parent_dir.joinpath("reporting")
     visualization_dir = parent_dir.joinpath("visualizations")
 
-    best_model_path = models_dir.joinpath("contact_model_f1_67.62_epoch_1.pt")
+    best_model_path = models_dir.joinpath("contact_model_f1_69.61_epoch_19.pt")
 
     raw_data_dir = data_dir.joinpath("raw_data")
     intermediate_data_dir = data_dir.joinpath("intermediate_data")
